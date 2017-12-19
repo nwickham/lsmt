@@ -2,7 +2,7 @@ CC=g++
 
 DEBUG=-g
 WARN=-Wall -W
-STD=-std=c++14
+STD=-std=c++17
 CFLAGS=$(WARN) $(DEBUG) $(STD) -c
 LFLAGS=$(WARN) $(DEBUG)
 
