@@ -11,8 +11,22 @@ int main(void) {
 	std::cout << "Done putting!\n";
 	auto data = database->get("plato");
 	if(data)
-		std::cout << *data << "\n";
+		std::cout << "FOund key: " << *data << "\n";
 	else
 		std::cout << "Couldn't resolve!\n";
+
+	data = database->get("plato");
+	if(data)
+		std::cout << "Found key:" << *data << "\n";
+	else
+		std::cout << "Couldn't resolve!\n";
+
+	database->remove("plato");
+	std::cout << "Key removed!\n";
+	data = database->get("plato");
+	if(!data)
+		std::cout << "Properly deleted!\n";
+	else
+		std::cout << "Key wasn't deleted!\n";
 	return 0;
 }
